@@ -1,0 +1,82 @@
+#task1
+
+# class Rectangle:
+#     def __init__(self, A = 0, B = 0):
+#         self.A = A
+#         self.B = B
+#     def getArea(self):
+#         return self.A * self.B
+#     def getPerimeter(self):
+#         return 2 * (self.A + self.B)
+#
+# class Circle:
+#     pi = 3.141592
+#     def __init__(self, rad):
+#         self.rad = rad
+#     def getAreaSq(self):
+#         return round(Circle.pi * self.rad ** 2)
+#     def getCircumLen(self):
+#         return round(2 * Circle.pi * self.rad)
+
+
+#task2
+
+# class Calculator:
+#     def add(self, a=0, b=0):
+#         return a+b
+#
+#     def subtract(self, a=0, b=0):
+#         return a-b
+#
+#     def multiply(self, a=0, b=0):
+#         return a*b
+#
+#     def divide(self, a=0, b=0):
+#         return a/b
+
+
+#task3
+
+# class Employee:
+#     def __init__(self, first_name, last_name):
+#         self.firstname = first_name
+#         self.lastname = last_name
+#         self.fullname = first_name + ' ' + last_name
+#         self.email = '{}.{}@company.com'.format(first_name, last_name).lower()
+
+#task4
+
+# def get_student_names(student_names: dict) -> list:
+#     return sorted(student_names.values())
+
+#task5
+
+# import re
+# text = "The rain in Spain"
+# def is_valid(text):
+#     if re.match(r'YOUR REGEX CODE', text):
+#         return True
+#         return False
+
+
+#task 6
+
+from datetime import date, timedelta
+today = date.today()
+print("Today's date:", today)
+rtoday = today.strftime("%Y%m%d")
+print("Today's date:", rtoday)
+i = int(input("1 = minus or 0 = plus: "))
+if i == 1:
+    dt = date.today() - timedelta(3)
+    print("Today's date is:", today, ", Before 3 days it will be:", dt)
+else:
+    dt = date.today() + timedelta(3)
+    print("Today's date is:", today, "After 3 days it will be:", dt)
+
+
+import pandas as pd
+from datetime import date
+today = date.today()
+period = pd.date_range(start=date.today(), periods=100)
+print(period)
